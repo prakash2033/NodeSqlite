@@ -1,0 +1,15 @@
+{
+  "name": "node-sqlite",
+  "version": "0.1.0",
+  "description": "Node app with sqlite for fun",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prakash Vishwakarma",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "sqlite3": "^5.0.2"
+  }
+}
