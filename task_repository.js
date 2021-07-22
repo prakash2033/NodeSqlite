@@ -40,6 +40,12 @@ class TaskRepository {
             `DELETE FROM tasks WHERE id = ?`, [id]
         )
     }
+
+    getById(id) {
+        return this.dao.get(
+            `SELECT * FROM tasks WHERE id =?`, [id]
+        )
+    }
 }
 
 module.exports = TaskRepository;

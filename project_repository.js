@@ -30,6 +30,12 @@ class ProjectRepository {
             `DELETE FROM projects WHERE id = ?`, [id]
         )
     }
+
+    getById(id) {
+        return this.dao.get(
+            `SELECT * FROM projects WHERE id =?`, [id]
+        )
+    }
 }
 
 module.exports = ProjectRepository;
