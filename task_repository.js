@@ -22,6 +22,18 @@ class TaskRepository {
                 VALUES (?, ?, ?, ?)`, [name, description, isComplete, projectId]
         );
     }
+
+    update(task) {
+        const {id, name, description, isComplete, projectId} = task;
+        this.dao.run(
+            `UPDATE tasks
+            SET name = ?,
+                description = ?,
+                isComplete = ?,
+                projectId = ?
+            WHERE id = ?`, [name, description, isComplete, projectId, id]
+        )
+    }
 }
 
 module.exports = TaskRepository;
