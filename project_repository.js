@@ -24,6 +24,12 @@ class ProjectRepository {
             `UPDATE projects SET name = ? WHERE id = ?`, [name,id]
         )
     }
+
+    delete(id) {
+        return this.dao.run(
+            `DELETE FROM projects WHERE id = ?`, [id]
+        )
+    }
 }
 
 module.exports = ProjectRepository;
